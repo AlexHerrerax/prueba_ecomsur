@@ -39,12 +39,41 @@ const datos =(data) =>{
     const{png} = data.flags
     console.log(png)
 
-    mostrarDatos(capital, official, region, borders, lenguas, currencies, name, symbol, png)
+    mostrarDatos(capital, official, region, borders, lenguas, name, symbol, png)
 
 
 }
 
+const mostrarDatos =(capital, official, region, borders, lenguas, name, symbol, png)=>{
+    
+    const lista = document.querySelector('#lista');
 
+    /* const liCapital = document.createElement('p');
+    liCapital.classList.add('rojo')
+    liCapital.innerHTML=`<h1>Capital: ${capital}</h1>`
+    lista.appendChild(liCapital) */
+
+    const resultado = document.createElement('div');
+
+    resultado.innerHTML= `
+    <p class="rojo">Capital: ${capital}</p>
+    <p class="rojo">Nombre Pais: ${official}</p>
+    <p class="rojo">Region: ${region}</p>
+    <p class="rojo">Paises Lim: ${borders}</p>
+    <p class="rojo">Lenguaje: ${lenguas}</p>
+    <p class="rojo">Nombre moneda: ${name}</p>
+    <p class="rojo">Simbolo: ${symbol}</p>
+    <img src=${png} alt="Bandera">
+    `
+
+    lista.appendChild(resultado);
+    
+    
+    
+
+   
+
+}
 
 
 
