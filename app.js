@@ -1,15 +1,13 @@
-const boton = document.getElementById("boton");
+const formulario = document.getElementById("formulario");
 
 const consultaApi = async (pais) => {
 
     const resp = await fetch(`https://restcountries.com/v3.1/name/${pais}`)
     const [data] = await resp.json()
     console.log(data);
-
     datos(data)
 
 }
-
 
 
 const datos =(data) =>{
@@ -40,7 +38,6 @@ const datos =(data) =>{
     console.log(png)
 
     mostrarDatos(capital, official, region, borders, lenguas, name, symbol, png)
-
 
 }
 
@@ -77,7 +74,8 @@ const mostrarDatos =(capital, official, region, borders, lenguas, name, symbol, 
 
 
 
-boton.addEventListener("click", () => {
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
     var input = document.getElementById("inputValue").value;
 
     consultaApi(input);
