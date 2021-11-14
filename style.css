@@ -62,7 +62,7 @@ section{
 
 #listas, #ejemplo{
    
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 50px;
     /* text-align: left; */
@@ -86,18 +86,28 @@ section{
     text-align: center; 
 }
 
+.error{
+    color: red;
+    font-size: 20px;
+    background-color: white;
+    margin-top: 10px;
+    
+}
+
 img{
-    width: 100%
+    width: 100%;
+   
 }
 
 .escudo, .bandera{
     width: 15%;  
+    margin: 10px;
 }
 
 
 .key{
     font-size: 22px;
-    margin: 5px; 
+    margin: 10px; 
 }
 
 .valor{
@@ -113,6 +123,8 @@ li:nth-child(2n+1){
 
 li{
     list-style: none;
+    background-image: radial-gradient(circle at 57.23% 53.37%, #77d9e6 0, #87ddec 50%, #7ce1ee 100%);
+   
 }
 
 .pais{
@@ -146,7 +158,12 @@ p{
         margin-top: 5px;
     }
     .bandera{
-        width: 100px;
+        width: 25%;
+        
+        
+    }
+    img{
+        height: 100px;
     }
     #formulario{
         width: 50%;
@@ -163,8 +180,10 @@ p{
 
 @media (max-width:500px){
    #formulario{
-       width: 100%;
-       
+       width: 100%; 
+   }
+   .bandera{
+    width: 35%;
    }
 
    body{
@@ -175,5 +194,8 @@ p{
 @media (max-width:350px){
     h1{
         font-size: 20px;
+    }
+    .bandera{
+        width: 45%;
     }
 }
