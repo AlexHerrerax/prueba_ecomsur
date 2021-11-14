@@ -48,6 +48,7 @@ const consultaApi = async (pais) => {
 const datos = (data,) => {
     const [capital] = data.capital;
     const { common } = data.name;
+    const { official } = data.name;
     const { region } = data;
     const [...borders] = data.borders;
     const { languages } = data;
@@ -72,12 +73,12 @@ const datos = (data,) => {
     const Limi = (x) => {
         const paisLimi = x;
         setTimeout(() => {
-            mostrarDatos(capital, common, region, borders, lenguas, name, symbol, png, escudo, paisLimi)
+            mostrarDatos(capital, common, region, borders, lenguas, name, symbol, png, escudo, paisLimi, official)
         }, 1);
     }
 }
 
-const mostrarDatos = (capital, common, region, borders, lenguas, name, symbol, png, escudo, paisLimi) => {
+const mostrarDatos = (capital, common, region, borders, lenguas, name, symbol, png, escudo, paisLimi, official) => {
 
     //Se coloca todo dentro del HTML
     resultado.innerHTML = `
@@ -104,6 +105,9 @@ const mostrarDatos = (capital, common, region, borders, lenguas, name, symbol, p
         <div id="contenido">
 
             <ul>
+                <li>
+                    <p class="key">Nombre Oficial: <span class="valor">${official}</span></p>
+                </li>
                 <li>
                     <p class="key">Capital: <span class="valor">${capital}</span></p>
                 </li>
