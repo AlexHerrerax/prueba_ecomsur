@@ -149,6 +149,7 @@ p{
         margin-top: 10px;
         margin-bottom: 10px;
         font-size: 15px;
+        width: 50%;
     }
     #contenido{
         margin-top: 5px;
@@ -189,6 +190,9 @@ p{
 }
 
 @media (max-width:350px){
+    .pais{
+        width: 70%;
+    }
     body{
         min-width: 300px;
     }
