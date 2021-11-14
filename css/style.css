@@ -5,35 +5,35 @@
 
 body{
     font-family: 'Shippori Antique B1', sans-serif;
-    background-image: radial-gradient(circle at 42.75% 8.88%, #e4fdff 0, #b2d8f3 25%, #7cb2d7 50%, #3e8dbc 75%, #006ca3 100%);
+    background-image: radial-gradient(circle at 50% 50%, #9390f3 0, #737fec 25%, #486ee5 50%, #005fde 75%, #0051d7 100%);
+}
+
+#logo{
+    margin-top: 20px;
+    width: 20%;
+    height: 20%;
 }
 
 header{
-    
     text-align: center;
     background-color: rgb(29, 27, 27);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     padding: 10px;
     color: white;
-    
+    display: fle;
 }
 
 section{
-    
     margin-top: 5px;
     text-align: center;
     padding: 10px;
-    
 }
 
-
 #formulario{
-   
     display: flex;
     flex-direction: column;
-    width: 40%;
-    text-align: center;
+    width: 30%;
     margin: 0 auto;
 }
 
@@ -41,15 +41,12 @@ section{
     font-size: 25px;
     font-weight: 700;
     margin: 15px;
-    box-shadow: turquoise;
     outline:none;
     border: 2px solid rgb(91, 171, 221);
     border-radius: 13px;
     font-family: 'Rubik', sans-serif;
     padding: 5px 0 5px 15px;
 }
-
-
 
 #formulario button{
     width: 50%;
@@ -58,16 +55,13 @@ section{
     background-color: rgb(32, 62, 145);
     color: white;
     font-weight: 600;
-    border-radius: 13px;
-     
+    border-radius: 13px; 
 }
 
-#listas, #ejemplo{
-   
+#listas{
     width: 70%;
     margin: 0 auto;
     margin-top: 50px;
-    text-align: left;
     background-image: radial-gradient(circle at 57.23% 53.37%, #e9f2f9 0, #d1dfec 50%, #b9cddf 100%);
 }
 
@@ -76,30 +70,38 @@ section{
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
+    width: 100%;
 }
 
 
 #contenido{
-   
     width: 100%;
     margin: 0 auto;
     margin-top: 30px;
     text-align: center; 
 }
 
+.error{
+    color: red;
+    font-size: 20px;
+    background-color: white;
+    margin-top: 10px;
+    
+}
+
 img{
-    width: 100%
+    width: 100%;
 }
 
 .escudo, .bandera{
-    width: 250px;
-    
+    width: 15%;  
+    margin: 10px;
 }
 
 
 .key{
     font-size: 22px;
-    margin: 5px; 
+    margin: 10px; 
 }
 
 .valor{
@@ -110,22 +112,80 @@ img{
 
 li:nth-child(2n+1){
     background-image: radial-gradient(circle at 57.23% 53.37%, #77b6e6 0, #87bcec 50%, #7cb9ee 100%);
-    list-style: none; 
+    list-style: none;
+    word-wrap: break-word; 
 }
 
 li{
     list-style: none;
+    background-image: radial-gradient(circle at 57.23% 53.37%, #77d9e6 0, #87ddec 50%, #7ce1ee 100%);
+    word-wrap: break-word; 
 }
 
 .pais{
-    font-size: 50px;
+    font-size: 20px;
     border: 1px solid red;
-    padding: 70px;
+    padding: 3%;
     border-radius: 10%;
     background-color: rgb(36, 35, 117);
     color: rgb(209, 211, 214);
+    width: 30%;
+    word-wrap: break-word;
 }
 
 p{
     text-align: center;
+}
+
+@media (max-width:800px){
+    .escudo{
+        display: none;
+    }
+    #cabecera{
+        flex-direction: column; 
+    }
+    .pais{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    #contenido{
+        margin-top: 5px;
+    }
+    .bandera{
+        width: 25%; 
+    }
+    img{
+        height: 100px;
+    }
+    #formulario{
+        width: 50%;
+    }
+    #ejemplo{
+        width: 100%;
+    }
+    h1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width:500px){
+   #formulario{
+       width: 100%; 
+   }
+   .bandera{
+    width: 35%;
+   }
+   body{
+       min-width: 260px
+   }
+}
+
+@media (max-width:350px){
+    h1{
+        font-size: 20px;
+    }
+    .bandera{
+        width: 45%;
+    }
 }
