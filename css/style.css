@@ -6,6 +6,9 @@
 body{
     font-family: 'Shippori Antique B1', sans-serif;
     background-image: radial-gradient(circle at 50% 50%, #9390f3 0, #737fec 25%, #486ee5 50%, #005fde 75%, #0051d7 100%);
+    max-width: 1900px;
+    min-width: 300px;
+    margin: 0 auto;
 }
 
 #logo{
@@ -151,7 +154,7 @@ p{
         margin-top: 5px;
     }
     .bandera{
-        width: 25%; 
+        width: 35%; 
     }
     img{
         height: 100px;
@@ -175,7 +178,7 @@ p{
        width: 100%; 
    }
    .bandera{
-    width: 35%;
+    width: 50%;
    }
    body{
        min-width: 260px
@@ -186,10 +189,7 @@ p{
 }
 
 @media (max-width:350px){
-    h1{
-        font-size: 20px;
-    }
-    .bandera{
-        width: 45%;
+    body{
+        min-width: 290px;
     }
 }
