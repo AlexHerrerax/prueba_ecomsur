@@ -1,3 +1,97 @@
-.rojo{
-    color: red;
+*{
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    background-image: radial-gradient(circle at 42.75% 8.88%, #e4fdff 0, #b2d8f3 25%, #7cb2d7 50%, #3e8dbc 75%, #006ca3 100%);
+}
+
+header{
+    sborder: 3px solid blue;
+    text-align: center;
+    background-color: rgb(29, 27, 27);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    padding: 10px;
+    color: white;
+    display: fle;
+}
+
+section{
+    border: 3px solid green;
+    margin-top: 60px;
+    text-align: center;
+    padding: 50px;
+    
+}
+
+
+
+#formulario{
+    border: 3px solid gray;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#inputValue{
+    font-size: 25px;
+    font-weight: 700;
+    margin: 15px;
+    box-shadow: turquoise;
+    outline:none;
+    border: 2px solid rgb(91, 171, 221);
+    border-radius: 13px;
+    font-family: 'Rubik', sans-serif;
+    padding: 5px 0 5px 15px;
+}
+
+
+
+#formulario button{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+    background-color: rgb(16, 65, 199);
+    color: white;
+    font-weight: 600;
+    border-radius: 13px;
+    
+    
+}
+
+#listas, #ejemplo{
+    border: 3px solid  red;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: left;
+    background-image: radial-gradient(circle at 57.23% 53.37%, #e9f2f9 0, #d1dfec 50%, #b9cddf 100%);
+}
+
+#cabecera{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between
+}
+
+h2{
+    align-items: flex-end;
+}
+
+#contenido{
+    border: 3px solid  red;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: left; 
+}
+
+img{
+    width: 200px;
+    height: 150px;
+}
+

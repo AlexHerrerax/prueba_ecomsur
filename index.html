@@ -1,37 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busqueda de Paises</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-
-<h1>Busqueda de paises</h1>
-
-<h4>Ingrese el pais</h4>
-
-
-<form id="formulario" >
-
-    <input type="text" id="inputValue" >
-    <button id="boton" type="submit">Buscar</button>
-
-</form>
 
 
 
-<div id="lista">
+    <header>
+        <h1 class="titulo">Busqueda de paises</h1>
+    </header>
+
+    <section>
 
 
-</div>
+
+        <form id="formulario">
+            <input type="text" id="inputValue" placeholder="Ingrese el pais">
+            <button id="boton" type="submit">Buscar</button>
+        </form>
+
+
+
+        <!-- <div id="listas">
+            <h2>Soy una lista</h2>
+        </div> -->
 
 
 
 
-<script src="/app.js"></script>
+        <div id="ejemplo">
+
+            <div id="cabecera">
+                
+                <div class="escudo">
+                    <img src="https://picsum.photos/150/150" alt="" id="esc">
+                    
+                </div>
+
+
+
+                <div class="datos">
+                    <h2 class="titulo">Chile</h2>
+                </div>
+
+
+
+                <div class="bandera">
+                    <img src="https://picsum.photos/150/150" alt="" id="ban">
+                   
+                </div>
+            </div>
+
+            <div id="contenido">
+
+                <p>Capital: <span>${}</span></p>
+                <p>Region: <span>${}</span></p>
+                <p>Paises Limestrofes: <span>${}</span></p>
+                <p>Lengua: <span>${}</span></p>
+                <p>Nombre moneda: <span>${}</span></p>
+                <p>Simbolo: <span>${}</span></p>
+
+
+            </div> 
+
+        </div>
+
+
+
+
+    </section>
+
+
+
+
+    <script src="/app.js"></script>
 </body>
+
 </html>

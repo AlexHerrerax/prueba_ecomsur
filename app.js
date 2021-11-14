@@ -1,12 +1,19 @@
 const formulario = document.getElementById("formulario");
+const resultado = document.createElement('div');
+const lista = document.querySelector('#lista');
 
 const consultaApi = async (pais) => {
-
-    const resp = await fetch(`https://restcountries.com/v3.1/name/${pais}`)
-    const [data] = await resp.json()
-    console.log(data);
-    datos(data)
-
+    try {
+        resultado.innerHTML=""
+        lista.innerHTML=""
+        const resp = await fetch(`https://restcountries.com/v3.1/name/${pais}`)
+        const [data] = await resp.json()
+        console.log(data);
+        datos(data)
+    } catch (error) {
+        console.log()
+        mostrarError("No existe el pais ingresado")
+    }
 }
 
 
@@ -43,14 +50,14 @@ const datos =(data) =>{
 
 const mostrarDatos =(capital, official, region, borders, lenguas, name, symbol, png)=>{
     
-    const lista = document.querySelector('#lista');
+    
 
     /* const liCapital = document.createElement('p');
     liCapital.classList.add('rojo')
     liCapital.innerHTML=`<h1>Capital: ${capital}</h1>`
     lista.appendChild(liCapital) */
 
-    const resultado = document.createElement('div');
+    
 
     resultado.innerHTML= `
     <p class="rojo">Capital: ${capital}</p>
@@ -65,20 +72,31 @@ const mostrarDatos =(capital, official, region, borders, lenguas, name, symbol, 
 
     lista.appendChild(resultado);
     
-    
-    
-
-   
 
 }
 
+const mostrarError =(mensaje) =>{
+    const errores = document.createElement('p');
+    errores.textContent=mensaje
+    lista.appendChild(errores)
+    
+}
 
 
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
+    lista.innerHTML=""
     var input = document.getElementById("inputValue").value;
 
+    if(!input.trim()){
+        console.log("Error. Campo vacio")
+        mostrarError("Campo vacio")
+        return;
+    }
+
     consultaApi(input);
+    //e.target.reset();
+    formulario.reset();
 
     
 
