@@ -16,7 +16,7 @@ header{
     font-size: 1.4rem;
     padding: 10px;
     color: white;
-    display: fle;
+    
 }
 
 section{
@@ -32,7 +32,8 @@ section{
    
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
+    text-align: center;
     margin: 0 auto;
 }
 
@@ -40,12 +41,12 @@ section{
     font-size: 25px;
     font-weight: 700;
     margin: 15px;
+    box-shadow: turquoise;
     outline:none;
     border: 2px solid rgb(91, 171, 221);
     border-radius: 13px;
     font-family: 'Rubik', sans-serif;
     padding: 5px 0 5px 15px;
-    
 }
 
 
@@ -57,15 +58,16 @@ section{
     background-color: rgb(32, 62, 145);
     color: white;
     font-weight: 600;
-    border-radius: 13px; 
+    border-radius: 13px;
+     
 }
 
 #listas, #ejemplo{
    
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 50px;
-    /* text-align: left; */
+    text-align: left;
     background-image: radial-gradient(circle at 57.23% 53.37%, #e9f2f9 0, #d1dfec 50%, #b9cddf 100%);
 }
 
@@ -74,7 +76,6 @@ section{
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    width: 100%;
 }
 
 
@@ -91,7 +92,8 @@ img{
 }
 
 .escudo, .bandera{
-    width: 15%;  
+    width: 250px;
+    
 }
 
 
@@ -116,64 +118,14 @@ li{
 }
 
 .pais{
-    font-size: 20px;
+    font-size: 50px;
     border: 1px solid red;
-    padding: 3%;
+    padding: 70px;
     border-radius: 10%;
     background-color: rgb(36, 35, 117);
     color: rgb(209, 211, 214);
-    width: 30%;
-    word-wrap: break-word;
 }
 
 p{
     text-align: center;
-}
-
-@media (max-width:800px){
-    .escudo{
-        display: none;
-    }
-    #cabecera{
-        flex-direction: column; 
-    }
-    .pais{
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 15px;
-    }
-    #contenido{
-        margin-top: 5px;
-    }
-    .bandera{
-        width: 100px;
-    }
-    #formulario{
-        width: 50%;
-    }
-
-    #ejemplo{
-        width: 100%;
-    }
-    h1{
-        font-size: 30px;
-    }
-    
-}
-
-@media (max-width:500px){
-   #formulario{
-       width: 100%;
-       
-   }
-
-   body{
-       min-width: 260px
-   }
-}
-
-@media (max-width:350px){
-    h1{
-        font-size: 20px;
-    }
 }
